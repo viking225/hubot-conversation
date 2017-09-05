@@ -2,8 +2,8 @@
 
 Have a multi-message chat with your bot.
 
-#####Reminder, before you start: This does *not* need to be added to [external-scripts.](https://github.com/lmarkus/hubot-conversation/issues/4)
-##How it works:
+##### Reminder, before you start: This does *not* need to be added to [external-scripts.](https://github.com/lmarkus/hubot-conversation/issues/4)
+## How it works:
 
 1) Make a new `Conversation` instance aware of your robot:
     
@@ -13,7 +13,7 @@ Have a multi-message chat with your bot.
     
 This will register a custom listener allowing the instance to check all incoming messages. Type parameter can take one of two values: `user` (default) or `room`. It defines if this conversation is with the whole room or with a particular user only.
 If the message comes from a user (or a room) that we're having a conversation with, it will be processed as the next step in an ongoing Dialog.
-#####Alternative, in case you want to filter caught messages
+##### Alternative, in case you want to filter caught messages
 Keep in mind that the instance will catch **all of the incoming messages**. If you want to filter messages going into the conversation, you can pass a function returning a Boolean as the third parameter of the instance creation. You will have access to message object inside your function, you can then filter accordingly.
   ```javascript
   var switchBoard = new Conversation(robot, 'user', function(msg){
@@ -43,7 +43,7 @@ After a match has been found. It will clear the choices, and end the dialog.
 
 The bot will forget about your dialog after a default timeout of 30 seconds.
 
-##Use
+## Use
 
 On your hubot script:
 
@@ -129,9 +129,9 @@ hubot> Shell: You have 5 seconds to accept your mission, or this message will se
 ```
 
 
-##API
+## API
 
-###Conversation
+### Conversation
 
 ##### startDialog(msg, [timeout], [timeoutMessage])
 
